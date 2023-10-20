@@ -1,6 +1,6 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+// lab4.js - Making a simple game (checkers, tic-tac-toe, rock-paper-scissors)
+// Author: Philip Choe
+// Date: 10/20/23
 
 // Constants
 
