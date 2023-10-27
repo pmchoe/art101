@@ -34,3 +34,14 @@ h1 {
   border: solid 1px #888;
   background-color: #A3C9A8;
 }
+
+#flex {
+  display: flex;
+  gap: 100px;
+}
+
+.car-pic {
+  padding: 10px;
+  float: right;
+  max-width: 500px;
+}
