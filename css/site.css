@@ -35,7 +35,7 @@ h1 {
   background-color: #A3C9A8;
 }
 
-#flex {
+.flex {
   display: flex;
   gap: 100px;
 }
