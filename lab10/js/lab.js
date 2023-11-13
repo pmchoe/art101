@@ -4,7 +4,7 @@ lab.js - This simple JavaScript/jQuery script uses buttons to modify some elemen
 Requirements: jQuery must be loaded for this script to work
 
 Author: Philip Choe
-Date: 11/7/23
+Date: 11/13/23
 */
 
 // add buttons for challenge, problems, and results
@@ -37,11 +37,3 @@ $("#results-button").click(function(){
     // adds or subtracts the "special" class to results section
     $("#results").toggleClass("special");
 });
-
-
-// code wes used to toggle content visibility via a toggle button
-/*
-$("#toggleButton").click(function(){
-    $("#content").toggle();
-});
-*/
