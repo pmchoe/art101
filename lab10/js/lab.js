@@ -1,39 +1,33 @@
 /*
-lab.js - This simple JavaScript/jQuery script uses buttons to modify some elements on the page
+lab.js - This simple JavaScript/jQuery script appends new elements to an output div
 
 Requirements: jQuery must be loaded for this script to work
 
 Author: Philip Choe
-Date: 11/13/23
+Date: 11/14/23
 */
 
-// add buttons for challenge, problems, and results
-$("#challenge").append("<br><button id='challenge-button'>Change Style</button>");
-$("#problems").append("<br><button id='problems-button'>Change Style</button>");
-$("#reflection").append("<br><button id='reflection-button'>Change Style</button>");
-$("#results").append("<br><button id='results-button'>Change Style</button>");
+function generateRandomText() {
+    const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
+    const min = 3;
+    const max = 100;
 
-// add click listener to challenge button
-$("#challenge-button").click(function(){
-    // adds or subtracts the "special" class to challenge section
-    $("#challenge").toggleClass("special");
-});
+    const randLen = Math.floor(Math.random() * (max - min + 1)) + min;
+    // Get a random starting index to slice the Lorem Ipsum text
+    const randStart = Math.floor(Math.random() * (text.length - randLen + 1));
+    // Generate the random Lorem Ipsum-like text
+    return text.slice(randStart, randStart + randLen);
+}
 
-// add click listener to problems button
-$("#problems-button").click(function(){
-    // adds or subtracts the "special" class to problems section
-    $("#problems").toggleClass("special");
-});
+// click listener for button
+$("#make-convo").click(function(){
+    // get new fake dialogue
+    const newText = generateRandomText();
 
-// add click listener to reflection button
-$("#reflection-button").click(function(){
-    // adds or subtracts the "special" class to reflection section
-    $("#reflection").toggleClass("special");
-});
-
-// add click listener to results button
-$("#results-button").click(function(){
-    // adds or subtracts the "special" class to results section
-    $("#results").toggleClass("special");
+    // appends a new dive to right of output div
+    $("#output").append('<div class="right"><p>' + $("#userInput").val() + '</p></div>');
+    
+    // append a new div to left of output div
+    $("#output").append('<div class="left"><p>' + newText + '</p></div>');    
 });

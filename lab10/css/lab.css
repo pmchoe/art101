@@ -2,15 +2,38 @@
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
 .minor-section {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
-  }
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid 1px #888;
+  background-color: #DDD8C4;
+}
 
-.special {
-  background-color: lavender;
-  border: dotted 50px yellowgreen;
-  color: pink;
-  font-weight: bold;
+.left {
+  text-align: left;
+}
+
+.left p {
+  display: inline-block;
+  max-width: 60%;
+  margin: 3px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-family: sans-serif;
+  background-color: rgb(233, 233, 233);
+  color: black;
+}
+
+.right {
+  text-align: right;
+}
+
+.right p {
+  display: inline-block;
+  max-width: 60%;
+  margin: 3px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-family: sans-serif;
+  background-color: #45ba59;
+  color: white;
 }
