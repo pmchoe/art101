@@ -7,9 +7,13 @@ Author: Philip Choe
 Date: 11/23/23
 */
 
+
 function sortingHat(str) {
     var length = str.length;
     var mod = length % 4;
+
+    // debug 
+    console.log(length + " % 4 = " + mod);
 
     if(mod == 0) {
         return "Gryffindor";
@@ -20,6 +24,7 @@ function sortingHat(str) {
     } else if(mod == 3) {
         return "Hufflepuff";
     }
+
 }
 
 var myButton = document.getElementById("submit");
@@ -29,3 +34,4 @@ myButton.addEventListener("click", function() {
     newText = "<p>The Sorting Hat has sorted you into " + house + "<p>";
     document.getElementById("output").innerHTML = newText;
 });
+
