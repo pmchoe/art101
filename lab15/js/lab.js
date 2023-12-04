@@ -7,6 +7,12 @@ Author: Philip Choe
 Date: 12/3/23
 */
 
+// function to capitalize first letter of a string
+function capitalizeFirstLetter() {
+    return str.charAt(0).toUpperCase() + structuredClone.slice(1);
+}
+
+
 const pokemonEndpoint = "https://pokeapi.co/api/v2/pokemon/";
 
 // adds click functionality to button
@@ -35,14 +41,17 @@ $("#activate").click(function() {
             const pokemonName = data.name;
             const pokemonTypes = data.types.map(typeObj => typeObj.type.name);
             const pokemonAbilities = data.abilities.map(ability => ability.ability.name);
-            const pokemonHeight = "";
-            const pokemonWeight = "";
+            const pokemonHeightInFeet = Math.floor(data.height * 3.937007874 / 12);
+            const pokemonHeightRemainderInInches = Math.floor(data.height * 3.947007874 % 12);
+            const pokemonWeight = data.weight;
 
             // print pokemon info in output div
             $("#output").append(`
             <p>Name: ${pokemonName}</p>
             <p>Type(s): ${pokemonTypes.join(', ')}</p>
             <p>Abilities: ${pokemonAbilities.join(', ')}</p>
+            <p>Height: ${pokemonHeightInFeet}' ${pokemonHeightRemainderInInches}"</p>
+            <p>Weight: ${pokemonWeight} lbs</p>
             `);
         },  
         // What we do if the api call fails
