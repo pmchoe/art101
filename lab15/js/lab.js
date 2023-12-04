@@ -47,6 +47,9 @@ $("#activate").click(function() {
         const pokemonHeightRemainderInInches = Math.floor(data.height * 3.947007874 % 12);
         const pokemonWeight = data.weight;
 
+        // clears div of previous entry
+        $("#output").empty();
+
         // print pokemon info in output div
         $("#output").append(`
         <p>Name: ${pokemonName}</p>
